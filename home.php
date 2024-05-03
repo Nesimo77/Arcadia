@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="fr">
     <head>
-        <title>Title</title>
+        <title>Arcadia - parc zoologique</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -16,14 +16,30 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
-        <link href="./navbar.html">
+        
         
     </head>
 
     <body>
         
+        <!-- Intégration de la navbar -->
+        <?php require 'src/navbar.html' ?>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa enim nec dui nunc mattis. Molestie at elementum eu facilisis sed odio morbi. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. Sollicitudin tempor id eu nisl nunc mi.</p>
         
-        <?php require 'navbar.html' ?>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    
+                </div>
+                <div class="col-12">
+                <?php require 'src/carousel.html' ?>
+                </div>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+    
         
         
         
