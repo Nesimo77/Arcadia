@@ -4,8 +4,14 @@
     
 }
 
-img{
+.searchButton{
     width: 15px;
     height: 15px;
     transform: rotate(90deg);
 }
+
+.logoArcadia {
+    width: 50px;
+    height: auto;
+}
+
