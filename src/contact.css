@@ -1,0 +1,17 @@
+.contact{
+    border-radius: 3px;
+    margin-top:  2%;
+}
+
+.contactBtn{
+    border: 2px;
+    border-color: black;
+    text-align: end;
+}
+
+.contactBtn .btn{
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+    text-align: end;
+}
