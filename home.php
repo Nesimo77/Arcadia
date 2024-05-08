@@ -27,16 +27,22 @@
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa enim nec dui nunc mattis. Molestie at elementum eu facilisis sed odio morbi. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. Sollicitudin tempor id eu nisl nunc mi.</p>
         
+
         <div class="container">
             <div class="row">
-                <div class="col"></div>
+                <div class="col-1"></div>
                 <div class="col-12">
                 <?php require 'src/carousel.html' ?>
                 </div>
                 
-                <div class="col"></div>
+                <div class="col-1"></div>
+            </div>
+            <div>
+            <?php require 'src/horaires.php' ?>
             </div>
         </div>
+
+        
     
         
         
