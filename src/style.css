@@ -1,0 +1,139 @@
+/* GENERAL */
+
+:root {
+  --bgColor: rgb(255, 255, 255);
+  --txtColor: black;
+  --txtColorHover: blue;
+  --navbarColor: rgba(255, 255, 255, 0.7);
+  --nav-item-Color: orange;
+  
+}
+
+
+/* BODY */
+
+.body-class {
+    background: var(--bgColor) !important;
+    font-family: "Archivo" , Arial, sans-serif; 
+    color: var(--txtColor);
+}
+
+
+/* dashboard.css */
+
+/* Style de la barre latérale */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 48px 0 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    background-color: var(--bgColor);
+  }
+  
+  /* Style des liens de navigation dans la barre latérale */
+  .nav-link {
+    color: var(--txtColor);
+    border: #007bff;
+  }
+  
+  .nav-link:hover {
+    color: var(--txtColorHover);
+  }
+  
+  /* Style de la zone de contenu principal */
+  .main-content {
+    padding: 20px; /* Marge intérieure pour l'espace entre le contenu et la barre latérale */
+  }
+
+  /* navbar.css */
+
+.navbarNav {
+    text-align: center;
+    
+    
+}
+
+.searchButton{
+    width: 15px;
+    height: 15px;
+    transform: rotate(90deg);
+}
+
+.logoArcadia {
+    width: 50px;
+    height: auto;
+}
+
+
+.navbar {
+  
+  background-color: var(--navbarColor); /* Fond de la navbar transparent */
+  backdrop-filter: blur(2px); /* Effet de flou pour une apparence translucide */
+  position: fixed; /* La navbar reste fixée en haut */
+  width: 100%; /* Occupera toute la largeur de l'écran */
+  z-index: 1000; /* Assure que la navbar soit toujours au-dessus du contenu */
+}
+
+.navbar.transparent {
+  background-color: transparent !important; /* Rend la barre de navigation transparente */
+}
+
+.nav-item.active {
+  border: 2px solid var(--nav-item-Color);
+}
+
+
+
+/* Contact.css */
+
+.contact{
+    border-radius: 3px;
+    margin-top:  2%;
+}
+
+.contactBtn{
+    border: 2px;
+    border-color: black;
+    text-align: end;
+}
+
+.contactBtn .btn{
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+    text-align: end;
+}
+
+
+
+.btnEnclos {
+  
+  border:none;
+  outline: none;
+  border-style: none;
+  width: 150px;
+  height: 150px;
+  margin: 0;
+  padding: 0;
+  padding-top: -2;
+  border-radius: 15px;
+  
+  
+}
+
+.boutonEnclos {
+  display: flex;
+  border: 2px;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+.carousel-image {
+  height: 100px; /* Hauteur souhaitée pour les images */
+  object-fit: cover; /* Redimensionner l'image pour remplir son conteneur tout en conservant son rapport d'aspect */
+  object-position: center; /* Centrer l'image horizontalement et verticalement dans son conteneur */
+  transition: height 0.5s ease;
+}

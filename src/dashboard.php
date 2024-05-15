@@ -7,12 +7,12 @@ if(isset($_SESSION['username'])) {
     
 } else {
     // Redirige vers la page de connexion si l'utilisateur n'est pas connecté
-    header("Location: /");
+    header("Location: /admin.php");
     exit();
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,9 +20,9 @@ if(isset($_SESSION['username'])) {
     <!-- CSS Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Votre propre CSS -->
-    <link href="dashboard.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
-<body>
+<body class="body-class">
     <div class="container-fluid">
         <div class="row">
             <!-- Barre latérale gauche -->
@@ -50,6 +50,10 @@ if(isset($_SESSION['username'])) {
                                 Animaux
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="logout.php">Déconnexion</a>
+                        </li>
+                        
 
                         <!-- Ajoutez d'autres éléments de menu ici -->
                     </ul>

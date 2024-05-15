@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['horaires'])) {
 }
 ?>
 
-<h2>Modifier les horaires</h2>
+<h2>Horaires d'ouverture :</h2>
 <form id="horaires-form" method="post">
     <?php
     // Sélectionnez les horaires actuels depuis la base de données
@@ -44,9 +44,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['horaires'])) {
         while($row = $result->fetch_assoc()) {
             echo '<div class="form-group row">';
             echo '<label class="col-sm-2 col-form-label">' . $row['jour'] . '</label>';
-            echo '<div class="col-sm-10">';
-            //echo '<input type="text" class="form-control" name="horaires[' . $row['jour'] . ']" value="' . $row['horaire'] . '">';
-            echo '<label class="col-sm-2 col-form-label">' . $row['horaire'] . '</label>';
+            echo '<div class="col-sm-9">';
+            echo '<label class="col-sm-12 col-form-label">' . $row['horaire'] . '</label>';
             echo '</div>';
             echo '</div>';
         }

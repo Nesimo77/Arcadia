@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcadia - parc zoologique</title>
-    <link rel="stylesheet" href="src/contact.css">
+    <link rel="stylesheet" href="src/style.css">
 </head>
-<body>
-    <?php require 'src/navbar.html' ?>
+<body class="body-class">
+<?php 
+    $currentPage = basename($_SERVER['PHP_SELF']);
+    require 'src/navbar.html' 
+    ?>
 
-    <div class="container">
+    <div class="container mt-10">
             <div class="row">
                 <div class="col"></div>
                 <div class="col-12">

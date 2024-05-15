@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcadia - parc zoologique</title>
+    <link rel="stylesheet" href="src/style.css">
 </head>
-<body>
-    <?php require 'src/navbar.html' ?>
+<body class="body-class">
+    <?php 
+    $currentPage = basename($_SERVER['PHP_SELF']);
+    require 'src/navbar.html' 
+    ?>
 
     <p>Utilisateur concerné : Visiteur</p>
 

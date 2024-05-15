@@ -5,12 +5,11 @@ include 'config.php';
 // Vérifier si des données de formulaire ont été soumises
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Récupérer les données du formulaire
-    $race = $_POST['race'];
+    $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
-    $nom_scientifique = $_POST['nom_scientifique'];
-    
-    $date_derniere_visite = $_POST['derniere_visite_veto'];
-    $nom_enclos = $_POST['enclos'];
+    $specialite = $_POST['specialite'];
+    $date_embauche = $_POST['date_embauche'];
+    $salaire = $_POST['salaire'];
 
     // Connexion à la base de données
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -21,12 +20,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // Préparer une déclaration d'insertion
-    $stmt = $conn->prepare("INSERT INTO animaux (race, prenom, nom_scientifique, derniere_visite_veto, enclos) VALUES (?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssss", $race, $prenom, $nom_scientifique, $date_derniere_visite, $nom_enclos);
+    $stmt = $conn->prepare("INSERT INTO veterinaires (nom, prenom, specialite, date_embauche, salaire) VALUES (?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssd", $nom, $prenom, $specialite, $date_embauche, $salaire);
 
     // Exécuter la déclaration
     if ($stmt->execute()) {
-        echo "Nouvel animal ajouté avec succès";
+        echo "Nouveau vétérinaire ajouté avec succès";
     } else {
         echo "Erreur: " . $stmt->error;
     }
@@ -37,6 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 
 // Rediriger vers la page principale
-header("Location: dashboard.php");
+header("Location: employes.php");
 exit();
 ?>
