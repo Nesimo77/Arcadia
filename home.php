@@ -42,7 +42,7 @@
 
     <!-- Conteneur Bootstrap pour le carousel -->
     <!--Code du carousel-->
-<div id="carouselExampleCaptions" class="carousel slide">
+<div id="carouselExampleCaptions" class="carousel slide mx-auto w-75">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -50,21 +50,21 @@
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="img/carousel/lions.jpg" class="d-block w-100 h-50 img-fluid carousel-image" alt="...">
+            <img src="img/carousel/lions.jpg" class=" w-100 h-50 img-fluid carousel-image" alt="...">
             <div class="carousel-caption d-none d-md-block">
                 <h5>Nos lions</h5>
                 <p>Moufassa à gauche et Simba à droite.</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="img/carousel/zebra.jpg" class="d-block w-100 h-50 img-fluid carousel-image" alt="...">
+            <img src="img/carousel/zebra.jpg" class=" w-100 h-50 img-fluid carousel-image" alt="...">
             <div class="carousel-caption d-none d-md-block">
                 <h5>Nos Zèbres</h5>
                 <p>Figurant dans le dernier film de Charlie Chaplin</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="img/carousel/fox.jpg" class="d-block w-100 h-50 img-fluid carousel-image" alt="...">
+            <img src="img/carousel/fox.jpg" class=" w-100 h-50 img-fluid carousel-image" alt="...">
             <div class="carousel-caption d-none d-md-block">
                 <h5>Nos renards</h5>
                 <p>On a retrouvé Roukie</p>
@@ -83,14 +83,14 @@
 
 
     <!-- Conteneur Bootstrap pour les informations -->
-    <div class="container text-center border">
+    <div class="container-fluid container-infoHome text-center border mt-4 ">
         <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
             <!-- Placeholder pour les horaires -->
-            <div class="p-2">
+            <div class="col-md-5 mb-4">
                 <?php require 'src/horaires.php' ?>
             </div>
             <!-- Placeholder pour les informations -->
-            <div class="p-2">
+            <div class="col-md-5 mb-4">
                 <h2>Information :</h2>
 
                 <p> Créer une base de donnée pour afficher les infos modifiable depuis le panel admin</p>
@@ -99,6 +99,9 @@
 
         Nouveauté :
     </div>
+
+
+
         
 
     

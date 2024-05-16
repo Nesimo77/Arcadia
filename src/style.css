@@ -1,25 +1,83 @@
 /* GENERAL */
 
-:root {
-  --bgColor: rgb(255, 255, 255);
-  --txtColor: black;
-  --txtColorHover: blue;
-  --navbarColor: rgba(255, 255, 255, 0.7);
-  --nav-item-Color: orange;
-  
-}
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+  --bgColor: rgb(255, 255, 255); /* Couleur de fond */
+  --txtColor: black; /* Couleur du texte */
+  --txtColorHover: blue; /* Couleur du texte au survol */
+  --navbarColor: rgba(255, 255, 255, 0.7); /* Couleur de la barre de navigation */
+  --nav-item-Color: orange; /* Couleur des éléments de navigation actifs */
+}
 
 /* BODY */
 
 .body-class {
-    background: var(--bgColor) !important;
-    font-family: "Archivo" , Arial, sans-serif; 
-    color: var(--txtColor);
+    padding-top: 70px;
+    background: var(--bgColor) !important; /* Couleur de fond du body */
+    font-family: "Archivo" , Arial, sans-serif;  /* Police de caractères */
+    color: var(--txtColor); /* Couleur du texte */
 }
 
+/* Home */
 
-/* dashboard.css */
+.container-infoHome {
+    color: var(--txtColor); /* Couleur du texte */
+    background-image: url('/img/backgroundTexte.jpg'); /* Image de fond */
+    background-size: 100% auto; /* Redimensionne l'image pour couvrir tout le conteneur */
+    background-position: center; /* Centre l'image de fond */
+    padding: 50px 0; /* Espacement intérieur */
+}
+
+/* Nos habitants */
+
+.btnEnclos {
+  border: none;
+  outline: none;
+  border-style: none;
+  width: 150px;
+  height: 150px;
+  margin: 0;
+  padding: 0;
+  padding-top: -2;
+  border-radius: 15px;
+}
+
+.containerHabitants {
+  display: flex;
+  border: 2px;
+  border-style: solid;
+  border-radius: 5px;
+}
+.containerHabitantsTableau{
+  display: grid;
+  border: 2px;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: var(--bgColor);
+  color: #333;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+  border: 2px solid var(--nav-item-Color);
+}
+
+/* Dashboard */
 
 /* Style de la barre latérale */
 .sidebar {
@@ -31,32 +89,30 @@
     padding: 48px 0 0;
     box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
     background-color: var(--bgColor);
-  }
-  
-  /* Style des liens de navigation dans la barre latérale */
-  .nav-link {
+}
+
+/* Style des liens de navigation dans la barre latérale */
+.nav-link {
     color: var(--txtColor);
     border: #007bff;
-  }
-  
-  .nav-link:hover {
-    color: var(--txtColorHover);
-  }
-  
-  /* Style de la zone de contenu principal */
-  .main-content {
-    padding: 20px; /* Marge intérieure pour l'espace entre le contenu et la barre latérale */
-  }
+}
 
-  /* navbar.css */
+.nav-link:hover {
+    color: var(--txtColorHover);
+}
+
+/* Style de la zone de contenu principal */
+.main-content {
+    padding: 20px; /* Marge intérieure pour l'espace entre le contenu et la barre latérale */
+}
+
+/* Navbar */
 
 .navbarNav {
     text-align: center;
-    
-    
 }
 
-.searchButton{
+.searchButton {
     width: 15px;
     height: 15px;
     transform: rotate(90deg);
@@ -67,40 +123,37 @@
     height: auto;
 }
 
-
 .navbar {
-  
-  background-color: var(--navbarColor); /* Fond de la navbar transparent */
-  backdrop-filter: blur(2px); /* Effet de flou pour une apparence translucide */
-  position: fixed; /* La navbar reste fixée en haut */
-  width: 100%; /* Occupera toute la largeur de l'écran */
-  z-index: 1000; /* Assure que la navbar soit toujours au-dessus du contenu */
+    background-color: var(--navbarColor); /* Couleur de fond de la barre de navigation */
+    backdrop-filter: blur(2px); /* Effet de flou pour une apparence translucide */
+    position: fixed; /* La navbar reste fixée en haut */
+    top: 0;
+    width: 100%; /* Occupera toute la largeur de l'écran */
+    z-index: 1000; /* Assure que la navbar soit toujours au-dessus du contenu */
 }
 
 .navbar.transparent {
-  background-color: transparent !important; /* Rend la barre de navigation transparente */
+    background-color: transparent !important; /* Rend la barre de navigation transparente */
 }
 
 .nav-item.active {
-  border: 2px solid var(--nav-item-Color);
+    border: 2px solid var(--nav-item-Color); /* Bordure pour l'élément de navigation actif */
 }
 
+/* Contact */
 
-
-/* Contact.css */
-
-.contact{
+.contact {
     border-radius: 3px;
     margin-top:  2%;
 }
 
-.contactBtn{
+.contactBtn {
     border: 2px;
     border-color: black;
     text-align: end;
 }
 
-.contactBtn .btn{
+.contactBtn .btn {
     border: 2px;
     border-style: solid;
     border-color: black;
@@ -109,31 +162,40 @@
 
 
 
-.btnEnclos {
-  
-  border:none;
-  outline: none;
-  border-style: none;
-  width: 150px;
-  height: 150px;
-  margin: 0;
-  padding: 0;
-  padding-top: -2;
-  border-radius: 15px;
-  
-  
+/* CAROUSEL */
+
+.carousel {
+    position: relative;
 }
 
-.boutonEnclos {
-  display: flex;
-  border: 2px;
-  border-style: solid;
-  border-radius: 5px;
+.carousel::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/img/background.webp') center/cover no-repeat;
+    filter: blur(8px); /* Ajustez la valeur du flou selon vos préférences */
+    z-index: -1;
+    background-size: cover; /* Assure que l'image de fond couvre entièrement l'arrière-plan */
+    background-position: center; /* Centre l'image de fond */
+}
+
+.carousel-inner {
+    z-index: 1; /* Assurez-vous que le carousel est au-dessus de l'arrière-plan flou */
+}
+
+.carousel-caption {
+    text-align: center; /* Centrage des éléments du carousel */
+    color:var(--txtColor);
+    font-weight: bold;
 }
 
 .carousel-image {
-  height: 100px; /* Hauteur souhaitée pour les images */
-  object-fit: cover; /* Redimensionner l'image pour remplir son conteneur tout en conservant son rapport d'aspect */
-  object-position: center; /* Centrer l'image horizontalement et verticalement dans son conteneur */
-  transition: height 0.5s ease;
+    height: auto; /* Hauteur souhaitée pour les images */
+    object-fit: cover; /* Redimensionner l'image pour remplir son conteneur tout en conservant son rapport d'aspect */
+    object-position: center; /* Centrer l'image horizontalement et verticalement dans son conteneur */
+    transition: height 0.5s ease;
+    object-fit: cover; /* Assurez-vous que les images du carousel remplissent l'espace disponible */
 }

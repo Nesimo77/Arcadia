@@ -37,11 +37,8 @@
 
         <form action="updateHoraires.php" method="post">
             <?php
-            // Connexion à la base de données
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "arcadia_bdd";
+            // Inclure le fichier de configuration
+            include 'config.php';
 
             // Création de la connexion
             $conn = new mysqli($servername, $username, $password, $dbname);
