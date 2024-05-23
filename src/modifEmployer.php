@@ -75,7 +75,7 @@ $conn->close();
             </div>
             <div class="form-group">
                 <label for="mail">Mail:</label>
-                <input type="email" class="form-control" id="mail" name="mail" value="<?php echo $employe['mail']; ?>" required>
+                <input type="email" class="form-control" id="mail" name="mail" value="<?php echo $employe['email']; ?>" required>
             </div>
             <div class="form-group">
                 <label for="poste">Poste:</label>

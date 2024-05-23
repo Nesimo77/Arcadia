@@ -21,15 +21,19 @@
     require 'src/navbar.html'; 
     ?>
 
-<div class="container-map mt-8">
-        <div class="row">
-            <!-- Image avec une map pour le plan du zoo -->
-            <img src="img/map_zoo.jpg" usemap="#image-map">
-            <map name="image-map">
-                <!-- Les coordonnées de la map vont ici -->
-            </map>
-        </div>
-    </div>
+<div class="container mt-8">
+<div class="container container px-4 mt-4">
+<h3>Nos installations</h3>
+<p>Arcadia dispose d'installations modernes et adaptées à chaque espèce, afin de garantir le bien-être des animaux et la sécurité des visiteurs. Nos installations comprennent :</p>
+<ul>
+<li><strong>Les serres tropicales :</strong> Un espace de 2000 m² dédié aux plantes et aux animaux des régions tropicales, avec une température constante de 25°C et une humidité de 80%.</li>
+<li><strong>Les enclos aquatiques :</strong> Des bassins de plusieurs dizaines de mètres carrés, où évoluent les otaries, les manchots et les phoques.</li>
+<li><strong>Les volières :</strong> Des espaces aérés et lumineux, où les oiseaux peuvent voler et se perchés librement.</li>
+<li><strong>Les enclos de plaines :</strong> Des espaces vastes et herbeux, où les animaux peuvent courir et se reposés.</li>
+<li><strong>Les enclos de montagne :</strong> Des espaces rocheux et escarpés, où les animaux peuvent grimper et se promener.</li>
+</ul>
+</div>
+</div>
 
     <div class="container mt-4">
         <!-- Boutons d'enclos -->

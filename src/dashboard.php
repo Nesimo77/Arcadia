@@ -46,6 +46,11 @@ if(isset($_SESSION['username'])) {
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('dashboardComment.php')">
+                                Gestion des commentaires
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#" onclick="loadContent('dashboardAnimaux.php')">
                                 Animaux
                             </a>

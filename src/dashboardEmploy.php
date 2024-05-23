@@ -9,38 +9,75 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h2>Gestion des Employés</h2>
-
-        <!-- Formulaire pour ajouter un employé -->
-        <h3>Ajouter un Employé</h3>
-        <form action="ajouterEmployer.php" method="post">
+<div class="container">
+        <h2>Ajouter Employé</h2>
+        <form id="ajouterEmployeForm">
             <div class="form-group">
                 <label for="nom">Nom:</label>
-                <input type="text" class="form-control" id="nom" name="nom" required>
+                <input type="text" id="nom" name="nom" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="prenom">Prénom:</label>
-                <input type="text" class="form-control" id="prenom" name="prenom" required>
+                <input type="text" id="prenom" name="prenom" class="form-control" required>
             </div>
             <div class="form-group">
-                <label for="mail">mail:</label>
-                <input type="email" class="form-control" id="mail" name="mail" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="poste">Poste:</label>
-                <input type="text" class="form-control" id="poste" name="poste" required>
+                <input type="text" id="poste" name="poste" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="date_embauche">Date d'embauche:</label>
-                <input type="date" class="form-control" id="date_embauche" name="date_embauche" required>
+                <input type="date" id="date_embauche" name="date_embauche" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="salaire">Salaire:</label>
-                <input type="number" step="0.01" class="form-control" id="salaire" name="salaire" required>
+                <input type="number" id="salaire" name="salaire" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="username">Nom d'utilisateur:</label>
+                <input type="text" id="username" name="username" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Mot de passe:</label>
+                <input type="password" id="password" name="password" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="role">Rôle:</label>
+                <select id="role" name="role" class="form-control" required>
+                    <option value="employe">Employé</option>
+                    <option value="veterinaire">Vétérinaire</option>
+                </select>
             </div>
             <button type="submit" class="btn btn-primary">Ajouter</button>
         </form>
+        <div id="responseMessage"></div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#ajouterEmployeForm").on("submit", function(event) {
+                event.preventDefault();
+
+                var formData = $(this).serialize();
+
+                $.ajax({
+                    url: "ajouterEmployer.php", // Le nom de votre fichier PHP
+                    type: "POST",
+                    data: formData,
+                    success: function(response) {
+                        $("#responseMessage").html("<div class='alert alert-success'>" + response.message + "</div>");
+                    },
+                    error: function() {
+                        $("#responseMessage").html("<div class='alert alert-danger'>Erreur lors de l'ajout de l'employé.</div>");
+                    }
+                });
+            });
+        });
+    </script>
+    </div>
 
         <!-- Tableau des employés -->
         
@@ -81,7 +118,7 @@
                         echo "<td>" . $row["id"] . "</td>";
                         echo "<td>" . $row["nom"] . "</td>";
                         echo "<td>" . $row["prenom"] . "</td>";
-                        echo "<td>" . $row["mail"] . "</td>";
+                        echo "<td>" . $row["email"] . "</td>";
                         echo "<td>" . $row["poste"] . "</td>";
                         echo "<td>" . $row["date_embauche"] . "</td>";
                         echo "<td>" . $row["salaire"] . "</td>";
@@ -103,30 +140,7 @@
 
 
         <!-- Formulaire pour ajouter un vétérinaire -->
-        <h3>Ajouter un Vétérinaire</h3>
-        <form action="ajouterVeterinaire.php" method="post">
-            <div class="form-group">
-                <label for="nom">Nom:</label>
-                <input type="text" class="form-control" id="nom" name="nom" required>
-            </div>
-            <div class="form-group">
-                <label for="prenom">Prénom:</label>
-                <input type="text" class="form-control" id="prenom" name="prenom" required>
-            </div>
-            <div class="form-group">
-                <label for="specialite">Spécialité:</label>
-                <input type="text" class="form-control" id="specialite" name="specialite" required>
-            </div>
-            <div class="form-group">
-                <label for="date_embauche">Date d'embauche:</label>
-                <input type="date" class="form-control" id="date_embauche" name="date_embauche" required>
-            </div>
-            <div class="form-group">
-                <label for="salaire">Salaire:</label>
-                <input type="number" step="0.01" class="form-control" id="salaire" name="salaire" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Ajouter</button>
-        </form>
+        
 
         <!-- Tableau des vétérinaires -->
         <h3>Liste des Vétérinaires</h3>
